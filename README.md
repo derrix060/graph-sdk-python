@@ -1,7 +1,7 @@
 # Getting started with the OneDrive SDK for Python
 
 ------------------------------------------------------------------------
-[![Build status](https://ci.appveyor.com/api/projects/status/x1cjahp817w6r455?svg=true)](https://ci.appveyor.com/project/OneDrive/vroom-client-python)
+[![Build status](https://ci.appveyor.com/api/projects/status/but211kf8as313wf/branch/master?svg=true)](https://ci.appveyor.com/project/derrix060/onedrive-sdk-python/branch/master)
 
 ## Installation
 
