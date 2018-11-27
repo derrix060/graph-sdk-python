@@ -51,6 +51,7 @@ class SubscriptionRequestBuilder(RequestBuilderBase):
     def delete_async(self):
         """Deletes the specified Subscription."""
         yield from self.request().delete_async()
+
     def get(self):
         """Gets the specified Subscription.
         
@@ -70,6 +71,7 @@ class SubscriptionRequestBuilder(RequestBuilderBase):
         """
         entity = yield from self.request().get_async()
         return entity
+
     def update(self, subscription):
         """Updates the specified Subscription.
         

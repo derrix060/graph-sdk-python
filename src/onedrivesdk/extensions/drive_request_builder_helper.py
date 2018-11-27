@@ -36,8 +36,8 @@ def item_by_path(self, path):
         :class:`ItemRequestBuilder<onedrivesdk.requests.item_request_builder.ItemRequestBuilder>`:
             A request builder for an item given a path
     """
-    #strip any leading '/'
-    path = str(path)[1:] if str(path)[0] == "/" else str(path)
-    return ItemRequestBuilder(self.append_to_request_url("root:/"+str(path)+":"), self._client)
+    path = str(path)[1:] if path.startswith(('/', ':')) else str(path)
+    return ItemRequestBuilder(self.append_to_request_url(
+        "root/" + path), self._client)
 
 DriveRequestBuilder.item_by_path = item_by_path

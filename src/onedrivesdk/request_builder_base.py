@@ -45,4 +45,9 @@ class RequestBuilderBase(object):
             url_segment (str): The segment you would like to append
                 to the existing request URL.
         """
-        return self._request_url + "/" + url_segment
+        if url_segment.startswith(('/', ':')):
+            url_segment = url_segment[1:]
+        request_url = self._request_url
+        if self._request_url.endswith(('/', ':')):
+            request_url = request_url[:-1]
+        return request_url + "/" + url_segment
